@@ -1,20 +1,17 @@
+import { useState } from 'react'
 import './App.css'
+import { TwitterFollowCard } from './TwitterFollowCard'
 
 export function App() {
     return(
-        <article>
-            <header>
-                <img alt="El avatar de un Hombre" src="https://unavatar.io/Lobo" />
-                <div>
-                    <strong>Allan Prieto Badilla</strong>
-                    <span>@allanp</span>
-                </div>
-            </header>
-            <aside>
-                <button>
-                    Seguir
-                </button>
-            </aside>
-        </article>
+        <section className='App'>
+            <TwitterFollowCard userName="Lobo" initialIsfollowing={true}>
+                Allan Prieto Badilla
+            </TwitterFollowCard>
+
+            <TwitterFollowCard userName="Aguacate">
+                Jime Picado Solano
+            </TwitterFollowCard>
+        </section>
     )
 }
